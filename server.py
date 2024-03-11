@@ -4,8 +4,9 @@ You can run it by running:
 > uvicorn server.app:app --reload
 """
 import fastapi
+import uvicorn
 
-from .router import cli_router, EndpointCLISpec
+from router import cli_router, EndpointCLISpec
 
 
 app = fastapi.FastAPI()
@@ -40,3 +41,8 @@ def index_get(name: str = "client"):
 
 
 app.include_router(cli_router)
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
