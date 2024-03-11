@@ -6,7 +6,7 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-nsa = "dyncli.src.nsa.dyncli:client"
+nsa = "nsa.dyncli:client"
 
 [build-system]
 requires = ["poetry-core"]
